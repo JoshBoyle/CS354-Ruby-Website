@@ -1,6 +1,6 @@
 # CS354-Ruby-Website
 
-– [ ] description and history
+– [X] description and history
 
 – [ ] links to specification, documentation, manuals, and tutorials
 
