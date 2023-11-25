@@ -2,7 +2,7 @@
 
 – [X] description and history
 
-– [ ] links to specification, documentation, manuals, and tutorials
+– [X] links to specification, documentation, manuals, and tutorials
 
 – [ ] available translators and installation instructions
 
