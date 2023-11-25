@@ -6,7 +6,7 @@
 
 – [ ] available translators and installation instructions
 
-– [ ] introductory programs (e.g., hello world), with build/run instructions
+– [X] introductory programs (e.g., hello world), with build/run instructions
 
 – [ ] more complex example programs, with build/run instructions
 
