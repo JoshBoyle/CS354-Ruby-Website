@@ -19,8 +19,7 @@ li {
     margin-left: 3rem;
 }
 
-
-#center {
+.center {
   margin: auto;
   width: 50%;
   padding: 10px;
