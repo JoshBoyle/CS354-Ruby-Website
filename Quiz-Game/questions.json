@@ -1,0 +1,62 @@
+[
+  {
+    "prompt": "How many Infinity Stones are there?\na: 3\nb: 5\nc: 6\nd: 10",
+    "answer": "c"
+  },
+  {
+    "prompt": "What is the only food that cannot go bad?\na: Dark chocolate\nb: Peanut butter\nc: Canned tuna\nd: Honey",
+    "answer": "d"
+  },
+  {
+    "prompt": "Which was René Magritte’s first surrealist painting?\na: Not to Be Reproduced\nb: Personal Values\nc: The Lovers\nd: The Lost Jockey",
+    "answer": "d"
+  },
+  {
+    "prompt": "What 90s boy band member bought Myspace in 2011?\na: Nick Lachey\nb: Justin Timberlake\nc: Shawn Stockman\nd: AJ McLean",
+    "answer": "b"
+  },
+  {
+    "prompt": "What is the most visited tourist attraction in the world?\na: Eiffel Tower\nb: Statue of Liberty\nc: Great Wall of China\nd: Colosseum",
+    "answer": "a"
+  },
+  {
+    "prompt": "What’s the name of Hagrid’s pet spider?\na: Nigini\nb: Crookshanks\nc: Aragog\nd: Mosag",
+    "answer": "c"
+  },
+  {
+    "prompt": "What’s the heaviest organ in the human body?\na: Brain\nb: Liver\nc: Skin\nd: Heart",
+    "answer": "b"
+  },
+  {
+    "prompt": "Who made the third most 3-pointers in the Playoffs in NBA history?\na: Kevin Durant\nb: JJ Reddick\nc: Lebron James\nd: Kyle Korver",
+    "answer": "c"
+  },
+  {
+    "prompt": "Which of these EU countries does not use the euro as its currency?\na: Poland\nb: Denmark\nc: Sweden\nd: All of the above",
+    "answer": "d"
+  },
+  {
+    "prompt": "Which US city is the sunniest major city and sees more than 320 sunny days each year?\na: Phoenix\nb: Miami\nc: San Francisco\nd: Austin",
+    "answer": "a"
+  },
+  {
+    "prompt": "What type of food holds the world record for being the most stolen around the globe?\na: Wagyu beef\nb: Cheese\nc: Coffee\nd: Chocolate",
+    "answer": "b"
+  },
+  {
+    "prompt": "What element does the chemical symbol Au stand for?\na: Silver\nb: Magnesium\nc: Salt\nd: Gold",
+    "answer": "d"
+  },
+  {
+    "prompt": "On average, how many seeds are located on the outside of a strawberry?\na: 100\nb: 200\nc: 400\nd: 500",
+    "answer": "b"
+  },
+  {
+    "prompt": "In what country do more than half of people believe in elves?\na: Norway\nb: Russia\nc: Holland\nd: Iceland",
+    "answer": "d"
+  },
+  {
+    "prompt": "What sport has been played on the moon?\na: Frisbee\nb: Soccer\nc: Golf\nd: Bocce ball",
+    "answer": "c"
+  }
+]
