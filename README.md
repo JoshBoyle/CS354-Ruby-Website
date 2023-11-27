@@ -4,7 +4,7 @@
 
 – [X] links to specification, documentation, manuals, and tutorials
 
-– [ ] available translators and installation instructions
+– [X] available translators and installation instructions
 
 – [X] introductory programs (e.g., hello world), with build/run instructions
 
