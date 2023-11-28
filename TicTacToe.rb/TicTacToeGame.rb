@@ -74,7 +74,7 @@ class TicTacToeGame
         end
     end
 
-    def winner?
+    def won?
         @winning_positions.any? do |a, b, c|
             if @board[a] == @board[b] && @board[b] == @board[c] && @board[a] != " "
                 @winning_line = [a, b, c]
@@ -96,5 +96,8 @@ class TicTacToeGame
 
     end
 
+    def winnder?
+
+    end
 end
 
