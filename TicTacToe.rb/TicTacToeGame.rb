@@ -24,5 +24,17 @@ class TicTacToeGame
         puts " #{board[6]} | #{board[7]} | #{board[8]} "
     end
 
+    # def make_move(board, index)
+    #     @board[position] = @current_player
+    # end
 
+    def turn_count(board)
+        counter = 0
+        for i in board
+            if i == "X" || i == "O"
+                counter += 1
+            end
+        end
+        return counter
+    end
 end
