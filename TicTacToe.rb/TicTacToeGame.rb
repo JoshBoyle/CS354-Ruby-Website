@@ -13,6 +13,7 @@ class TicTacToeGame
            @current_player = "O"
         else
             @current_player = "X"
+        end
     end
 
     def display_board
@@ -23,5 +24,5 @@ class TicTacToeGame
         puts " #{board[6]} | #{board[7]} | #{board[8]} "
     end
 
-    
+
 end
