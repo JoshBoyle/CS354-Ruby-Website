@@ -14,3 +14,4 @@ class TicTacToeGame
         else
             @current_player = "X"
     end
+end
