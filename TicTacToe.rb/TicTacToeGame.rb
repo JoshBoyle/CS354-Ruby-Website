@@ -58,4 +58,15 @@ class TicTacToeGame
             return "Y"
         end
     end
+
+    def winner?
+        winning_position.any? do |a, b, c|
+            if @board[a] == @board[b] && @board[b] == @board[c] && @board[a] != " "
+                @winning_line = [a, b, c]
+                return true
+            end
+        end
+        false
+    end
+
 end
