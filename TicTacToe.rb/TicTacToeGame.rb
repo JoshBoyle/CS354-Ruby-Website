@@ -4,10 +4,6 @@ class TicTacToeGame
         @current_player = "X"
     end
 
-    def input_to_index
-
-    end
-
     def switch_players
         if @current_player == "X"
            @current_player = "O"
@@ -27,6 +23,20 @@ class TicTacToeGame
     def make_move(board, index)
         @board[index] = @current_player
     end
+    def valid_move?(board, index)
+        if board[index] == " " && index.between?(0,8) == true
+        end
+    end
+
+    def get_move
+        display_board
+        puts "Player: "+ @current_player + ". Select a space [0-9]"
+        gets.chomp.to_i-1
+    end
+
+    # def make_move(board, index)
+    #     @board[position] = @current_player
+    # end
 
     def turn_count(board)
         counter = 0
