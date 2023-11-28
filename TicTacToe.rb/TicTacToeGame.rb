@@ -34,10 +34,6 @@ class TicTacToeGame
         gets.chomp.to_i-1
     end
 
-    # def make_move(board, index)
-    #     @board[position] = @current_player
-    # end
-
     def turn_count(board)
         counter = 0
         for i in board
@@ -54,4 +50,12 @@ class TicTacToeGame
         [0, 4, 8], [2, 4, 6]
     ]
     
+    def current_player(board)
+        current = turn(board)
+        if current % 2 == 0
+            return "X"
+        else
+            return "Y"
+        end
+    end
 end
