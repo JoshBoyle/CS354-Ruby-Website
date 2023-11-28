@@ -12,19 +12,22 @@ class TicTacToeGame
         end
     end
 
-    def display_board(board)
-        puts " #{board[0]} | #{board[1]} | #{board[2]} "
+    def display_board
+        puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
         puts "-----------"
-        puts " #{board[3]} | #{board[4]} | #{board[5]} "
+        puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
         puts "-----------"
-        puts " #{board[6]} | #{board[7]} | #{board[8]} "
+        puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
     end
 
-    def make_move(board, index)
-        @board[index] = @current_player
+    def make_move(index)
+        if valid_move?(index)
+            @board[index] = @current_player
+        end
     end
-    def valid_move?(board, index)
-        if board[index] == " " && index.between?(0,8) == true
+
+    def valid_move?(index)
+        if @board[index] == " " && index.between?(0,8) == true
         end
     end
 
@@ -34,17 +37,29 @@ class TicTacToeGame
         gets.chomp.to_i-1
     end
 
-    def turn_count(board)
+    def turn_count
         counter = 0
-        for i in board
+        for i in @board
             if i == "X" || i == "O"
                 counter += 1
             end
         end
-        return counter
+        counter
     end
 
-    winning_positions [
+    def play
+        initialize
+        while (i = 0); i < 9
+            take_turn
+        end
+    end
+
+    def take_turn
+        make_move(get_move)
+    #     check win conditions
+    end
+
+    winning_positions = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8],
         [0, 3, 6], [1, 4, 7], [2, 5, 8],
         [0, 4, 8], [2, 4, 6]
@@ -70,3 +85,4 @@ class TicTacToeGame
     end
 
 end
+
