@@ -24,9 +24,9 @@ class TicTacToeGame
         puts " #{board[6]} | #{board[7]} | #{board[8]} "
     end
 
-    # def make_move(board, index)
-    #     @board[position] = @current_player
-    # end
+    def make_move(board, index)
+        @board[index] = @current_player
+    end
 
     def turn_count(board)
         counter = 0
@@ -36,5 +36,12 @@ class TicTacToeGame
             end
         end
         return counter
+    end
+
+    def winning_positions [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
+    ]
     end
 end
