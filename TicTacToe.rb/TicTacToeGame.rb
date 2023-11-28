@@ -22,8 +22,8 @@ class TicTacToeGame
 
     def make_move(index)
         if valid_move?(index)
-            @board[index] = @current_player
-        end
+        @board[index] = @current_player
+    end
     end
 
     def valid_move?(index)
@@ -65,8 +65,8 @@ class TicTacToeGame
         [0, 4, 8], [2, 4, 6]
     ]
     
-    def current_player(board)
-        current = turn(board)
+    def current_player
+        current = turn_count
         if current % 2 == 0
             return "X"
         else
@@ -84,5 +84,16 @@ class TicTacToeGame
         false
     end
 
+    def draw?
+
+    end
+
+    def full? 
+
+    end
+
+    def over?
+
+    end
 end
 
