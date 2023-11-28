@@ -22,8 +22,8 @@ class TicTacToeGame
 
     def make_move(index)
         if valid_move?(index)
-        @board[index] = @current_player
-    end
+            @board[index] = @current_player
+        end
     end
 
     def valid_move?(index)
@@ -59,7 +59,7 @@ class TicTacToeGame
     #     check win conditions
     end
 
-    winning_positions = [
+    @winning_positions = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8],
         [0, 3, 6], [1, 4, 7], [2, 5, 8],
         [0, 4, 8], [2, 4, 6]
@@ -74,8 +74,8 @@ class TicTacToeGame
         end
     end
 
-    def won?
-        winning_position.any? do |a, b, c|
+    def winner?
+        @winning_positions.any? do |a, b, c|
             if @board[a] == @board[b] && @board[b] == @board[c] && @board[a] != " "
                 @winning_line = [a, b, c]
                 return true
@@ -88,7 +88,7 @@ class TicTacToeGame
 
     end
 
-    def full? 
+    def full?
 
     end
 
@@ -96,8 +96,5 @@ class TicTacToeGame
 
     end
 
-    def winner?
-
-    end
 end
 
