@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Find Missing</title>
+</head>
+<body>
+
+    <h2>Find Missing</h2>
+
+    <h3>easy_find_missing.rb</h2>
+    <pre>
+def find_missing(sequence)
+    consecutive     = sequence.each_cons(2)
+    differences     = consecutive.map { |a,b| b - a }
+    sequence        = differences.max_by { |n| differences.count(n) }
+    missing_between = consecutive.find { |a,b| (b - a) != sequence }
+    missing_between.first + sequence
+end
+
+find_missing([2,4,6,10])
+#8
+    </pre>
+
+    <h3>find_missing.rb</h2>
+    <pre>
 #find_missing Class
 #
 #Description: This class has methods for analyzing a sequence of numbers and finding the missing element based on consecutive differences. 
@@ -87,3 +115,12 @@ end
 
 #testing find_missing
 find_missing([2, 4, 6, 10]) 
+    </pre>
+
+    <h3>Output</h2>
+    <pre>
+8
+    </pre>
+        
+</body>
+</html>
