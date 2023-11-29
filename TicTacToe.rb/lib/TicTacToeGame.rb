@@ -28,6 +28,7 @@ class TicTacToeGame
 
     def valid_move?(index)
         if @board[index] == " " && index.between?(0,8) == true
+            true
         end
     end
 
@@ -51,12 +52,13 @@ class TicTacToeGame
         num_turns = 0
         while num_turns < 9
             take_turn
-            num_turns = num_turns + 1
+            num_turns += 1
         end
     end
 
     def take_turn
         make_move(get_move)
+        switch_players
     #     check win conditions
     end
 
