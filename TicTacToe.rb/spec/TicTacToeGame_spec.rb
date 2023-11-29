@@ -17,12 +17,40 @@ RSpec.describe TicTacToeGame do
       expect(game.instance_variable_get(:@current_player)).to eq("O")
     end
 
-    it 'switches the current player from O to X' do
+    it 'switches the current player twice from X to O to X' do
       game.switch_players
       game.switch_players
       expect(game.instance_variable_get(:@current_player)).to eq("X")
     end
   end
 
+  describe '#valid_move' do
+    it 'should return true for all spaces' do
+      (0..8).each { |i|
+        expect(game.valid_move?(i)).to eq true
+      }
+      end
+  end
+
+  describe '#display_board' do
+    it 'should display the board with no moves' do
+      expect { game.display_board }.to output("   |   |   \n-----------\n   |   |   \n-----------\n   |   |   \n").to_stdout
+    end
+  end
+
+  describe '#make_move' do
+    it 'should place an X at index 0' do
+      game.make_move(0)
+      expect { game.display_board }.to output(" X |   |   \n-----------\n   |   |   \n-----------\n   |   |   \n").to_stdout
+    end
+
+    it 'should place an O at index 4 after an X at 0' do
+      game.make_move(0)
+      game.switch_players
+      game.make_move(4)
+      expect { game.display_board }.to output(" X |   |   \n-----------\n   | O |   \n-----------\n   |   |   \n").to_stdout
+    end
+    
+  end
 
 end

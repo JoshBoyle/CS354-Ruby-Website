@@ -28,8 +28,9 @@ class TicTacToeGame
 
     def valid_move?(index)
         if @board[index] == " " && index.between?(0,8) == true
-            true
+            return true
         end
+        false
     end
 
     def get_move
@@ -104,6 +105,9 @@ class TicTacToeGame
     end
 end
 
-game = TicTacToeGame.new
-game.play
+# Checks if file is
+if __FILE__ == $0
+    game = TicTacToeGame.new
+    game.play
+end
 
