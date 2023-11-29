@@ -47,13 +47,6 @@ class TicTacToeGame
         counter
     end
 
-    def play
-        initialize
-        while (i = 0); i < 9
-            take_turn
-        end
-    end
-
     def take_turn
         make_move(get_move)
     #     check win conditions
@@ -96,8 +89,17 @@ class TicTacToeGame
 
     end
 
-    def winnder?
+    def winner?
 
     end
 end
+
+def play
+    initialize
+    while i == 0; i < 9
+        take_turn
+    end
+end
+
+play
 
