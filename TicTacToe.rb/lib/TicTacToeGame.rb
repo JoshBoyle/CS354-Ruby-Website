@@ -133,6 +133,7 @@ class TicTacToeGame
     end
 
     def full?
+        @board.all? { || }
 
     end
 
