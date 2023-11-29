@@ -1,3 +1,12 @@
+#find_missing Class
+#
+#Description: This class has methods for analyzing a sequence of numbers and finding the missing element based on consecutive differences. 
+#It includes custom methods for iterating over consecutive pairs, applying a block to each element, and finding the maximum element in an array based on a block. 
+#
+#Authors: Ben Brindley,
+#Date: Mon 27 Nov 2023 05:35:27 PM MDT
+
+
 #custom method for iterating over consecutive pairs in an array
 # 
 #parameters
