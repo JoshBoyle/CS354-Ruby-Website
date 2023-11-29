@@ -118,6 +118,9 @@ class TicTacToeGame
         end
     end
 
+    #determines if there is a winning position
+    #
+    #returns - (Boolean)
     def won?
         @winning_positions.any? do |a, b, c|
             if @board[a] == @board[b] && @board[b] == @board[c] && @board[a] != " "
@@ -128,16 +131,22 @@ class TicTacToeGame
         false
     end
 
+    #determines if the players have drawn.
+    #
+    #returns - (Boolean)
     def draw?
-
+        if @board.full? == true && @bord.won == false
+            return true
+        end
     end
 
     #determines if the board is full
     #
     #returns - (Boolean)
     def full?
-        @board.all? { || }
-
+        @board.each? do |full_board|
+            full_board == "X" || full_board == "O"
+        end
     end
 
     def winner?
