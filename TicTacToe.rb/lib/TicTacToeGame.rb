@@ -140,12 +140,14 @@ class TicTacToeGame
 
     end
 
-    def over?
-
-    end
-
     def winner?
+        @winning_positions = won?(@board)
 
+        if @winning_positions.nil?
+            nil
+        else
+            @board[@winning_positions[0]]
+        end
     end
 end
 
