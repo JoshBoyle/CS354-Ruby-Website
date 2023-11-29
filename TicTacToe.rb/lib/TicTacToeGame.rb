@@ -95,7 +95,7 @@ class TicTacToeGame
 end
 
 def play
-    initialize
+    TicTacToeGame.new
     while i == 0; i < 9
         take_turn
     end
