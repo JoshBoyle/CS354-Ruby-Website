@@ -1,17 +1,20 @@
 #!/usr/bin/env ruby
 
-require 'date'
+# require 'date'
 
 # d = DateTime.now.strftime('%s') # seconds
-
 
 puts 'Enter your date of birth in the form yyyy/mm/dd'
 birth = gets.chomp
 puts "you entered #{birth}"
 
-month = birth[0..3]
-day = birth[5..6]
-year = birth[8..9]
+puts 'Enter your time of birth in the form  00:00:00'
+time = gets.chomp
+puts "you entered #{time}"
+
+year = birth[0..3]
+month = birth[5..6]
+day = birth[8..9]
 
 # puts "the current time is #{d}"
 #puts "the birth month is #{mi}"
@@ -27,8 +30,14 @@ year = birth[8..9]
 # do something with a hashmap.
 #s = Time.now.to_i(month)
 
-puts "#{s}"
 
-#t = Time.new(to_i(month), 02, 24, 12, 0, 0, "+09:00")
-#
-t =
+# zone = timezone("US/Boise")
+
+t = Time.new(year.to_i, month.to_i, day.to_i, 12, 0, 0, "+02:00")
+c = Time.now
+
+a = c.to_i - t.to_i
+
+puts "You have been alive for #{a} seconds!"
+# puts "#{t.to_i}"
+# puts "#{c.to_i}"
