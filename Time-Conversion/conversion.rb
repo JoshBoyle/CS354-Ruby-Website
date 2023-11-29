@@ -24,4 +24,4 @@ a = c.to_i - t.to_i
 
 puts "You have been alive for #{a} seconds!"
 
-# add heap to rank who has been alive the longest. and then display the longest times.
+#add heap to rank who has been alive the longest. and then display the longest times.
