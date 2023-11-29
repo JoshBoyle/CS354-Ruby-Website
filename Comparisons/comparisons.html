@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Comparisons</title>
+</head>
+<body>
+    <h2>Tabular Comparison Examples</h2>
+    <h3>HelloWorld</h3>
+    <h4>Ruby</h4>
+    <pre>
+    puts 'Hello, World!'
+    </pre>
+    <h4>C</h4>
+    <pre>
+#include &ltstdio.h&gt
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+    </pre>
+    <h4>Java</h4>
+    <pre>
+package Comparisons;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+    </pre>
+    <h4>Python</h4>
+    <pre>
+print('Hello, World!')
+    </pre>
+    <h3>Variables</h3>
+    <h4>Ruby</h4>
+    <pre>
+_var1 = "Ben"       #Local Variables
+
+@var2 = "Jake"      #Instance Variables
+
+@@var3 = "Josh"     #Class Variables
+
+$var4 = "Braeden"   #Global Variables
+    </pre>
+    <h4>C</h4>
+    <pre>
+#include &ltstdio.h&gt
+
+int main() {
+    int num = 15;
+    float floatNum = 5.99;
+    char letter = 'J';
+    char word[] = "word";
+    return 0;
+}
+    </pre>
+    <h4>Java</h4>
+    <pre>
+package Comparisons;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+    </pre>
+    <h4>Python</h4>
+    <pre>
+x = 5       #Integer
+y = "Ben"   #String
+z = 3.0     #Float
+    </pre>
+    <h3>Methods</h3>
+    <h4>Ruby</h4>
+    <pre>
+def example(j)
+    j = 200
+end
+
+example(i)
+    </pre>
+    <h4>C</h4>
+    <pre>
+#include &ltstdio.h&gt
+int main() {
+    int foo = 3;
+    int bar = 5;
+    int sum;
+
+    sum = addNums(foo, bar);
+
+    return 0;
+}
+
+int addNums(int a, int b) {
+    int result;
+    result = a+b;
+    return result;
+}
+    </pre>
+    <h4>Java</h4>
+    <pre>
+package Comparisons;
+
+public class methods {
+    static void method() {
+        System.out.println("This is an example!");
+    }
+
+    public static void main(String[] args) {
+        method();
+    }
+}
+    </pre>
+    <h4>Python</h4>
+    <pre>
+def example_function
+    print("This is an example")
+
+example_function()
+    </pre>
+    <h3>Loops</h3>
+    <h4>Ruby</h4>
+    <pre>
+#while loop
+x = gets.chomp.to_i
+
+while x >= 0
+    puts x
+    x = x -1
+end
+
+#until loop
+x = gets.chomp.to_i
+
+until x < 0
+    puts x
+    x -= 1
+end
+
+#for loop
+x = gets.chomp.to_i
+
+for i in 1..x do
+    puts x - i
+end
+    </pre>
+    <h4>C</h4>
+    <pre>
+#include &ltstdio.h&gt
+
+int main() {
+  int i;
+
+  for (i = 1; i < 11; ++i)          //for loop
+  {
+    printf("%d ", i);
+  }
+
+  int j = 5;                        //while loop
+  while(j >= 0) {
+    printf("%d ", j);
+    j--;
+  }
+
+int num=1;
+	do	{                            //do-while loop
+		printf("%d\n",2*num);
+		num++;
+	}
+    while(num<=10);
+
+
+  return 0;
+}
+    </pre>
+    <h4>Java</h4>
+    <pre>
+package Comparisons;
+
+public class loops {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 0; i <= n; i++) {      //for loop
+            System.out.println(i);
+        }
+
+        int[] numbers = {3,4,5,6};          //for each loop
+        for(int number: numbers) {
+            System.out.println(number);
+        }
+
+        int j = 5;                          //while loop
+        while(j >= 0) {
+            System.out.println(j);
+            j--;
+        }
+
+    }
+}
+    </pre>
+    <h4>Python</h4>
+    <pre>
+#for loop
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
+
+#else in for loop
+for x in range(6):
+    print(x)
+else:
+    print("Finally finished!")
+
+#range loop function
+for x in range(6):
+    print(x)
+    </pre>
+    <h3>Operators</h3>
+    <h4>Ruby</h4>
+    <pre>
+x = 1
+y = 2
+
+x, y = 1, 2
+x, y = y, x
+
+x + y
+
+x - y
+
+x * y
+
+x / y
+
+x < y
+
+x > y
+
+x <= y
+
+x >= y
+
+x == y
+    </pre>
+    <h4>C</h4>
+    <pre>
+int main() {
+    int x = 1;
+    int y = 2;
+    int z;
+
+    z = x + y;
+
+    z = x - y;
+
+    z = x * y;
+
+    z = x / y;
+
+    if(x < y)
+        return;
+    if(x > y)
+        return;
+    if(x <= y)
+        return;
+    if(x >= y)
+        return;
+    if(x == y)
+        return;
+
+}
+    </pre>
+    <h4>Java</h4>
+    <pre>
+package Comparisons;
+
+public class Operators {
+    //Have to create a variable to hold total without modifying x and y
+    int x = 1;
+    int y = 2;
+    int z;
+
+    z = x + y;
+
+    z = x - y;
+
+    z = x * y;
+
+    z = x / y;
+
+    if (x < y)
+        break;
+    if (x > y)
+        break;
+    if (x <= y)
+        break;
+    if (x >= y)
+        break;
+    if (x == y)
+        break;
+}
+    </pre>
+    <h4>Python</h4>
+    <pre>
+x = 1
+y = 2
+
+x, y = 1, 2
+x, y = y, x
+
+x + y
+
+x - y
+
+x * y
+
+x / y
+
+x < y
+
+x > y
+
+x <= y
+
+x >= y
+
+x == y
+    </pre>
+</body>
+</html>
