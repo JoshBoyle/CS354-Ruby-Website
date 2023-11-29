@@ -1,0 +1,11 @@
+Error: Not enough space in the backpack for 20 orange(s).
+
+Current Backpack:
+apple: 10
+banana: 15
+Total Items: 25
+
+Current Backpack:
+apple: 10
+banana: 10
+Total Items: 20
