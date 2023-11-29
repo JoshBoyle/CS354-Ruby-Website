@@ -25,9 +25,10 @@ puts "Hello #{name}\n\n"
 # Using single quotes will not allow special characters of any kind to be read and used
 puts 'Hello #{name}\n\n'
 
-# When using an array in Ruby there are a variety of useless features that are included
+# When using an array in Ruby there are a variety of useful features that are included
 testSet = [1, 2.0, "three"]
 puts testSet[-1]    #Produces "three"
+
 # Ease of use methods such as
 testSet.first
 testSet.last
@@ -35,12 +36,12 @@ testSet.length
 
 # Ruby contains what are called Ranges, where the range given will run in the for each style
 (1..10).each{ |number| puts number}
-# These also see a usage in for loops
+# These also see a usage of ranges in 'for' loops
 for i in 1..10
   puts "#{i}"
 end
 
-#Or simply call a loop and break it with an if function!
+# Or simply call a loop and break it with an if function!
 j = 0
 loop do
   break if j > 5
@@ -48,7 +49,7 @@ loop do
   j += 1
 end
 
-# The if statement also has some other usefullness to it when used in connection with other functions
+# The if statement also has some other usefulness to it when used in connection with other functions
 puts "End of time" if x > 10
 
 # Also works with keyword 'unless'
@@ -66,11 +67,11 @@ end
 i = 10
 i.times{|i| print i}
 
-# Each
+# each
 fruits = %w(mangos bananas apples)
 fruits.each{|unique| print unique}
 
-# Upto
+# upto
 i = 0
 upperLimit = 10
 i.upto(upperLimit) {|number| print number}
