@@ -24,7 +24,7 @@ RSpec.describe TicTacToeGame do
     end
   end
 
-  describe '#valid_move' do
+  describe '#valid_move?' do
     it 'should return true for all spaces' do
       (0..8).each { |i|
         expect(game.valid_move?(i)).to eq true
@@ -50,7 +50,41 @@ RSpec.describe TicTacToeGame do
       game.make_move(4)
       expect { game.display_board }.to output(" X |   |   \n-----------\n   | O |   \n-----------\n   |   |   \n").to_stdout
     end
-    
+  end
+
+  describe '#turn_count' do
+    it 'should return 0 with no moves played' do
+      expect(game.turn_count).to eq 0
+    end
+
+    it 'should return 1 with one move played' do
+      game.make_move(0)
+      expect(game.turn_count).to eq 1
+    end
+  end
+
+  describe '#current_player' do
+    it 'should return X with no moves' do
+      expect(game.current_player).to eq("X")
+    end
+
+    it 'should return O with one move' do
+      game.make_move(0)
+      expect(game.current_player).to eq("O")
+    end
+  end
+
+  describe '#won?' do
+    it 'should return false on no moves' do
+      expect(game.won?).to eq false
+    end
+
+    it 'should return true on a winning combo' do
+      game.make_move(0)
+      game.make_move(1)
+      game.make_move(2)
+      expect(game.won?).to eq true
+    end
   end
 
 end

@@ -13,6 +13,11 @@ class TicTacToeGame
     def initialize 
         @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
         @current_player = "X"
+        @winning_positions = [
+          [0, 1, 2], [3, 4, 5], [6, 7, 8],
+          [0, 3, 6], [1, 4, 7], [2, 5, 8],
+          [0, 4, 8], [2, 4, 6]
+        ]
     end
 
     #switches the current player between "X" and "O".
@@ -100,12 +105,6 @@ class TicTacToeGame
         switch_players
     #     check win conditions
     end
-
-    @winning_positions = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8],
-        [0, 3, 6], [1, 4, 7], [2, 5, 8],
-        [0, 4, 8], [2, 4, 6]
-    ]
     
     #determines the current player based on the turn count.
     #
@@ -113,9 +112,9 @@ class TicTacToeGame
     def current_player
         current = turn_count
         if current % 2 == 0
-            return "X"
+            "X"
         else
-            return "Y"
+            "O"
         end
     end
 
@@ -146,7 +145,8 @@ class TicTacToeGame
     end
 end
 
-# Checks if file is
+# Checks if this is the primary file being run
+# Stops the tests from running it
 if __FILE__ == $0
     game = TicTacToeGame.new
     game.play
