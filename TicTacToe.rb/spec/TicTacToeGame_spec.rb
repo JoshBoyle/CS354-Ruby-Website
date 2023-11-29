@@ -80,11 +80,61 @@ RSpec.describe TicTacToeGame do
     end
 
     it 'should return true on a winning combo' do
-      game.make_move(0)
-      game.make_move(1)
-      game.make_move(2)
+      (0..2).each {|i|
+        game.make_move(i)
+      }
       expect(game.won?).to eq true
     end
+  end
+
+  describe '#full?' do
+    it 'should return false on a non full board' do
+      game.make_move(0)
+      expect(game.full?).to eq false
+    end
+
+    it 'should return true if full' do
+      (0..8).each { |i|
+        game.make_move(i)
+      }
+      expect(game.full?).to eq true
+    end
+  end
+
+  describe '#draw?' do
+    it 'should return false on board not full and no win' do
+      game.make_move(0)
+      expect(game.draw?).to eq false
+    end
+
+    it 'should return false for board full and win' do
+      (0..8).each { |i|
+        game.make_move(i)
+      }
+      expect(game.draw?).to eq false
+    end
+
+    it 'should return false for board not full and win' do
+      (0..2).each {|i|
+        game.make_move(i)
+      }
+      expect(game.draw?).to eq false
+    end
+
+    it 'should return true for board full and no win' do
+      game.make_move(0)
+      game.make_move(1)
+      game.make_move(5)
+      game.make_move(6)
+      game.make_move(7)
+      game.switch_players
+      game.make_move(2)
+      game.make_move(3)
+      game.make_move(4)
+      game.make_move(8)
+      expect(game.draw?).to eq true
+    end
+
   end
 
 end

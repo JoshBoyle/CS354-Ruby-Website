@@ -89,21 +89,24 @@ class TicTacToeGame
     #
     #returns - (void)
     def play
-        num_turns = 0
-        while num_turns < 9
-            take_turn
-            num_turns += 1
+        until take_turn?
         end
     end
 
     #executes a single turn of the game, making a move and switching players.
     #this method internally calls `make_move` and `switch_players`.
     #returns - (void)
-    
-    def take_turn
+
+    def take_turn?
         make_move(get_move)
+        ret = winner?
+        if ret[0]
+            display_board
+            puts ret[1]
+            return true
+        end
         switch_players
-    #     check win conditions
+        false
     end
     
     #determines the current player based on the turn count.
@@ -135,29 +138,30 @@ class TicTacToeGame
     #
     #returns - (Boolean)
     def draw?
-        if @board.full? == true && @bord.won == false
+        if full? == true && won? == false
             return true
         end
+        false
     end
 
     #determines if the board is full
     #
     #returns - (Boolean)
     def full?
-        @board.each? do |full_board|
-            full_board == "X" || full_board == "O"
+        @board.all? do |full_board|
+            full_board != " "
         end
     end
 
     def winner?
-        @winning_positions = won?(@board)
-
-        if @winning_positions.nil?
-            nil
-        else
-            @board[@winning_positions[0]]
+        if won?
+            return [true, "#{@current_player} won!"]
+        elsif draw?
+            return [true, "Everybody lost!"]
         end
+        [false]
     end
+
 end
 
 # Checks if this is the primary file being run
