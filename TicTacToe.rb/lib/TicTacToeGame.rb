@@ -47,6 +47,14 @@ class TicTacToeGame
         counter
     end
 
+    def play
+        num_turns = 0
+        while num_turns < 9
+            take_turn
+            num_turns = num_turns + 1
+        end
+    end
+
     def take_turn
         make_move(get_move)
     #     check win conditions
@@ -94,12 +102,6 @@ class TicTacToeGame
     end
 end
 
-def play
-    TicTacToeGame.new
-    while i == 0; i < 9
-        take_turn
-    end
-end
-
-play
+game = TicTacToeGame.new
+game.play
 
