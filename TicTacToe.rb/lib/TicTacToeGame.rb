@@ -4,7 +4,7 @@
 # displaying the board, making moves, validating moves, getting player input, counting turns,
 # playing the game, taking turns, determining the current player, and checking for a win.
 #
-# Authors: Ben Brindley, Josh Boyle, Jake Forsberg
+# Authors: Ben Brindley, Josh Boyle, Jake Forsberg, Braeden LaCombe
 # Date: Mon 27 Nov 2023 06:41:44 PM MDT
 
 class TicTacToeGame
