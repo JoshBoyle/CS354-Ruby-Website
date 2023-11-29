@@ -1,0 +1,24 @@
+#+title: Ruby
+
+
+1 intro and 1 comples per person.
+https://www.ruby-lang.org/en/about/
+
+ruby is general focused much of the practical applicaitons are web based.
+https://www.codecademy.com/resources/blog/what-is-ruby-used-for/
+
+rss feed reader.
+https://www.codementor.io/projects/ruby
+
+Full-stack web development
+Web scraping & crawling
+Static website generators
+Command-line media player (using FFI + libVLC) & other command-line tools
+Automation, Backup & DevOps tools
+Servers
+Parsing, data cleaning & filtering
+API Clients (like Twitter API or Github API)
+Report generators (PDF, HTML, CSV)
+
+i'm going to do a ruby rss reader
+ruby web scraper.
