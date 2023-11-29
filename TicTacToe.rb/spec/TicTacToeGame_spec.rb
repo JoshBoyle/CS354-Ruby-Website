@@ -134,7 +134,33 @@ RSpec.describe TicTacToeGame do
       game.make_move(8)
       expect(game.draw?).to eq true
     end
+  end
 
+  describe '#winner?' do
+    it 'should return true and game over message for win' do
+      (0..2).each {|i|
+        game.make_move(i)
+      }
+      expect(game.winner?).to eq [true, "X won!"]
+    end
+
+    it 'should return true and game over message for draw' do
+      game.make_move(0)
+      game.make_move(1)
+      game.make_move(5)
+      game.make_move(6)
+      game.make_move(7)
+      game.switch_players
+      game.make_move(2)
+      game.make_move(3)
+      game.make_move(4)
+      game.make_move(8)
+      expect(game.winner?).to eq [true, "Everybody lost!"]
+    end
+
+    it 'should return false for in progress game' do
+      expect(game.winner?).to eq [false]
+    end
   end
 
 end

@@ -89,14 +89,15 @@ class TicTacToeGame
     #
     #returns - (void)
     def play
+        # Use the return value of take_turn to iterate. Since logic is
+        # done in take_turn, the loop is empty
         until take_turn?
         end
     end
 
     #executes a single turn of the game, making a move and switching players.
     #this method internally calls `make_move` and `switch_players`.
-    #returns - (void)
-
+    #returns - (Boolean)
     def take_turn?
         make_move(get_move)
         ret = winner?
@@ -153,7 +154,11 @@ class TicTacToeGame
         end
     end
 
+    #determines if the game is over and returns the results
+    #
+    #return [boolean, string(sometimes)]
     def winner?
+        # Demonstrating the ability to use multivalued arrays
         if won?
             return [true, "#{@current_player} won!"]
         elsif draw?
