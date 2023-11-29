@@ -136,8 +136,9 @@ class TicTacToeGame
     #
     #returns - (Boolean)
     def full?
-        @board.all? { || }
-
+        @board.each? do |full_board|
+            full_board == "X" || full_board == "O"
+        end
     end
 
     def over?
